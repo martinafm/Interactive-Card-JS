@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+
+  <!-- - - - GOOGLE FONT - - -  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <!-- - - - STYLES - - -->
+  <link rel="stylesheet" href="css/main.css">
+
+
+
+</head>
+
+<body>
+
+  
+<div class="container">
+    <aside class="card">
+      <section class="card__front">
+        <p class="card__front-cardNumber">0000 0000 0000 0000</p>
+        <div class="card__front-details">
+          <p class="card__front-details-cardholderName">Mark Pears</p>
+          <p class="card__front-details-expDate"><span class="card__front-details-expDateMonth">00</span>/<span class="card__front-details-expDateYear">00</span></p>
+        </div>
+      </section>
+      <section class="card__back">
+        <p class="card__back-cvc">000</p>
+      </section>
+    </aside>
+
+    <main>
+    <section class="main">
+
+      <article class="main__article">
+        <div class="main__article-box">
+          <form class="main__article-box-form">
+            <label class="main__article-box-form-label" for="cardholderName">Cardholder name
+              <input class="main__article-box-form-input" type="text" id="cardholderName" placeholder="e.g. Mark Pears">
+              <p class="main__article-box-form--error unactive" id="errorTextOnly">Wrong format, text only</p>
+            </label>
+
+            <label class="main__article-box-form-label" for="cardNumber">Card Number
+              <input class="main__article-box-form-input" type="text" id="cardNumber" maxlength="16"
+                placeholder="e.g. 1234 5678 9123 0000">
+                <p class="main__article-box-form--error unactive" id="errorTooShort">Number is too short</p>
+                <p class="main__article-box-form--error unactive" id="errorNumbersOnly">Wrong format, numbers only</p>
+            </label>
+
+            <div class="main__article-box-form-cvcyear">
+
+              <label class="main__article-box-form-label">Exp. date (mm/yy)
+                <div class="main__article-box-form-label-mmyy">
+                <input class="main__article-box-form-input" type="number" minlength="2" maxlength="2" min="1" max="12"
+                  id="expDateMonth" placeholder="MM">
+                <input class="main__article-box-form-input" type="number" minlength="2" maxlength="2"
+                  id="expDateYear" placeholder="YY">
+                </div>
+                <p class="main__article-box-form--error unactive" id="errorBlankDate">Can't be blank</p>
+              </label>
+
+
+              <label class="main__article-box-form-label" for="cvc">cvc
+                <input class="main__article-box-form-input" type="text" id="cvc" minlength="3" maxlength="3"
+                  placeholder="e. g. 123">
+                  <p class="main__article-box-form--error unactive" id="errorBlankCvc">Can't be blank</p>
+              </label>
+
+            </div>
+
+          </form>
+          <button type="submit" class="main__article-box-btn confirm-btn">Confirm</button>
+        </div>
+        <div class="completed unactive">
+          <p><img src="../img/icon-complete.svg" aria-hidden="true"></p>
+          <p class="completed__title">Thank you!</p>
+          <p class="completed__text">We've added your card details</p>
+          <button type="submit" class="main__article-box-btn continue-btn">Continue</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text"> Challenge by <a class="footer__text--link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a class="footer__text--link" href="https://github.com/martinafm">Martyna</a>.
+    </p>
+  </footer>
+  
+  
+  
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+
+</html>

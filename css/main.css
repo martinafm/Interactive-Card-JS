@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+body::after {
+  content: "";
+  background-image: url("../img/bg-main-mobile.png");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60vw;
+  width: 100%;
+  z-index: -100;
+  transition: width 0.3s ease-in-out;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.main__article {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+}
+.main__article-box {
+  width: 100%;
+  height: 45%;
+  padding-bottom: 3em;
+}
+.main__article-box-btn {
+  width: 100%;
+  padding: 1.25em;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(270deg, 3%, 87%);
+  font-family: "Space Grotesk", sans-serif;
+  transition: transform 0.3s;
+}
+.main__article-box-btn:hover {
+  transform: scale(0.97);
+}
+.main__article-box-form {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  padding-bottom: 2em;
+  font-weight: bold;
+}
+.main__article-box-form-cvcyear {
+  display: flex;
+  gap: 1em;
+}
+.main__article-box-form-cvcyear label:first-child {
+  display: flex;
+}
+.main__article-box-form-cvcyear label:first-child input {
+  width: 50%;
+}
+.main__article-box-form-label {
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.main__article-box-form-label-mmyy {
+  display: flex;
+  gap: 1em;
+}
+.main__article-box-form-input {
+  padding: 1em;
+  border: 0.5px solid hsl(279deg, 6%, 55%);
+  border-radius: 10px;
+}
+.main__article-box-form-input:focus {
+  outline: none;
+  border: 0.5px solid #6448fe;
+}
+.main__article-box-form-input:invalid {
+  border: 0.5px solid hsl(0deg, 100%, 66%);
+}
+.main__article-box-form-input::-moz-placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  color: hsl(270deg, 3%, 87%);
+}
+.main__article-box-form-input:-ms-input-placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  color: hsl(270deg, 3%, 87%);
+}
+.main__article-box-form-input::placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  color: hsl(270deg, 3%, 87%);
+}
+.main__article-box-form--error {
+  text-transform: none;
+  color: hsl(0deg, 100%, 66%);
+}
+
+.error {
+  border: 0.5px solid hsl(0deg, 100%, 66%);
+}
+
+.card {
+  width: 100%;
+  height: 35rem;
+}
+.card__front, .card__back {
+  position: absolute;
+  max-width: 42.7rem;
+  max-height: 22.5rem;
+  padding: 2.3rem;
+  scale: 0.8;
+  border-radius: 10px;
+  width: 100%;
+  height: 37%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.card__front {
+  background-image: url("../img/bg-card-front.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 31vw;
+  left: -1.5em;
+  z-index: 10;
+  color: hsl(270deg, 3%, 87%);
+}
+.card__front::after {
+  content: url("../img/card-logo.svg");
+  position: absolute;
+  top: 27px;
+  left: 27px;
+}
+.card__front-details {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding-top: 1.5em;
+}
+.card__front-cardNumber {
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+}
+.card__back {
+  background-image: url("../img/bg-card-back.png");
+  background-size: cover;
+  top: 0.5em;
+  right: -1em;
+  width: 100%;
+}
+.card__back-cvc {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: hsl(270deg, 3%, 87%);
+  letter-spacing: 2px;
+}
+
+.footer__text {
+  font-size: 1.4rem;
+  padding: 2em 1em;
+  text-transform: uppercase;
+}
+.footer__text--link {
+  text-decoration: none;
+  color: #6448fe;
+  font-weight: bold;
+  transition: letter-spacing 0.3s ease-out;
+}
+.footer__text--link:hover {
+  letter-spacing: 1px;
+}
+
+.completed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 5em 0;
+}
+.completed__title {
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+.completed__text {
+  font-size: 1.2rem;
+}
+
+.unactive {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card__front, .card__back {
+    max-width: 44.7rem;
+    max-height: 24.5rem;
+    padding: 2.3rem;
+    scale: 1;
+    width: 100%;
+  }
+  .card__front {
+    top: 36vw;
+    left: 5em;
+  }
+  .card__front-details {
+    font-size: 1.8rem;
+  }
+  .card__front-cardNumber {
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+  }
+  .card__back {
+    right: 3em;
+    top: 8em;
+  }
+  .completed__title {
+    font-size: 3rem;
+  }
+  .completed__text {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 750px) {
+  body::after {
+    height: 100vh;
+    background-image: url("../img/bg-main-desktop.png");
+    background-size: cover;
+    width: 33.5%;
+  }
+  .main {
+    width: 80%;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .container {
+    flex-direction: row;
+  }
+  .card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-left: 3em;
+  }
+  .card__front, .card__back {
+    max-height: 19.5em;
+    max-width: 35.7em;
+    position: unset;
+    margin: 3em 0;
+  }
+  .card__front-details {
+    font-size: 1.4rem;
+  }
+  .card__front-cardNumber {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+}
+@media (min-width: 1200px) {
+  .card__front, .card__back {
+    max-height: 24.5em;
+    max-width: 44.7em;
+    margin: 2em 0;
+  }
+  .card__front {
+    transform: translateX(-20%);
+  }
+  .card__front-details {
+    font-size: 1.8rem;
+  }
+  .card__front-cardNumber {
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+  }
+  .card__back-cvc {
+    font-size: 2.2rem;
+  }
+  .completed__title {
+    font-size: 3.8rem;
+  }
+  .completed__text {
+    font-size: 2.4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
