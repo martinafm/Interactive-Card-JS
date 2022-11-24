@@ -1,5 +1,5 @@
 # Interactive card details form
-The aim of creating this project was practice. Basically, this project could be a initial project for another purpose or function, for example for technology connected with bank. Project coded using HTML, CSS, SASS, technology BEM and JavaScript. Design is created following Mobile First principle and also fully responsible. Click link to see project on live: https://martinafm.github.io/interactive-card-details-form/.
+The aim of creating this project was practice. Basically, this project could be a initial project for another purpose or function, for example for technology connected with bank. Project coded using HTML, CSS, SASS, technology BEM and JavaScript. Design is created following Mobile First principle and also fully responsible. Click link to see project on live: https://martinafm.github.io/Interactive-Card-JS/.
 
 ## Table of Contents
 * [General Info](#general-information)
